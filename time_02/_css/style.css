@@ -1,0 +1,85 @@
+/* 
+    Created on : 16/01/2019, 18:59:56
+    Author     : ML - Manutenção Lira
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0c3c60;
+}
+
+.calendar{
+    width: 300px;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 5px 50px rgba(0,0,0,0.5);
+}
+
+.calendar .img{
+    width: 100%;
+    height: 150px;
+    padding: 20px;
+    color: #fff;
+    background: #009688;
+}
+
+.calendar .img h2,
+.calendar .img h3{
+    text-shadow: 0 2px 2px rgba(0,0,0,0.2);
+}
+
+.calendar .img h2{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.calendar .img h3{
+    font-weight: normal;
+    font-size: 0.875em;
+}
+
+.calendar .date{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25px, 1fr));
+    grid-gap: 10px;
+    
+}
+
+.calendar .date div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    color: #262626;
+}
+
+.calendar .date div.day{
+    font-weight: bold;
+}
+
+.calendar .date div.day:first-child,
+.calendar .date div.number:nth-child(7n + 1){
+    font-weight: bold;
+    color: #ff685d;
+}
+
+.calendar .date div.number.active,
+.calendar .date div.number:hover{
+    color: #fff;
+    background: #009688;
+    font-weight: bold;
+    cursor: pointer;
+}
